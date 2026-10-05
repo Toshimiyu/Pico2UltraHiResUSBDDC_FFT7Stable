@@ -1,7 +1,7 @@
 # Pico2UltraHiResUSBDDC (USB Digital Audio Device)
 
-This project is based on the original work by ArqAlice (MIT License).  
-Originally developed for the PICO_AUDIO_PACK environment (RP2040), this firmware has been fully restructured for Raspberry Pi Pico 2 (**RP2350**). It does not support RP2040-based boards.
+This project is based on the original work by ArqAlice (MIT License).
+This firmware has been fully restructured for Raspberry Pi Pico 2 (RP2350). RP2040-based boards are not supported.
 
 GPIO pin assignments have been remapped to maintain compatibility with the original PICO_AUDIO_PACK hardware, with further modifications to enhance audio quality, stability, and compatibility (including Pico Display Pack 2.0 integration).
 

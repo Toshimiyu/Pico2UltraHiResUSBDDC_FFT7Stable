@@ -121,8 +121,9 @@ RP2350（Raspberry Pi Pico 2）上の仕様で可能な範囲で、出力ピン�
 ---
 
 ## 📚 ライセンス
-* MIT License
-* Copyright (c) 2025 ArqAlice
+本プロジェクトは MIT License のもとで公開されています。
+* 原著作権: Copyright (c) 2025 ArqAlice
+* 追加・改変部分: Copyright (c) 2025-2026 Toshimi (Pico2 /Pico　Audiio　Pack　Pico Display Pack2.0 / FFT統合等)
 
 ---
 

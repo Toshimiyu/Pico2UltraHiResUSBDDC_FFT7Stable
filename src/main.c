@@ -270,20 +270,19 @@ int main(void)
     spectrum_init();
     spectrum_set_sample_rate(audio_state.freq);
 
-    // Keep the splash on screen for its original 20-second duration. USB audio
-    // is not exposed yet, and Core0 remains available to service the audio path.
-    while ((uint32_t)(time_us_32() - splash_start_us) < 20000000u) {
-        upsampling_process_core0();
-        display_rta_splash_service();
-        sleep_ms(1);
-    }
+	// USBを先に公開する
+	usb_sound_card_init();
+	sleep_ms(100);
 
-    // Switch screens before exposing the USB audio endpoint to the host.
-    display_rta_init();
+	// 起動画面を表示しながらUSB認識を進める
+	while ((uint32_t)(time_us_32() - splash_start_us) < 20000000u) {
+    	upsampling_process_core0();
+    	display_rta_splash_service();
+    	sleep_ms(1);
+	}
 
-    // Expose the USB audio device only after Core0 has finished the startup graphics.
-    usb_sound_card_init();
-    sleep_ms(100);
+	// 通常画面へ切り替え
+	display_rta_init();
 
 	// watchdog_enable(50, 1);
 

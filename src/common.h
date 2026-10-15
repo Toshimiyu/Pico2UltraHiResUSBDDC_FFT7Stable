@@ -60,7 +60,7 @@
 // Core1 ratio is applied directly (1/2/4 are supported).
 #define CORE1_UP_RATIO_HP (1)
 #define CORE1_UP_RATIO_LP (1)
-#define DEFAULT_GAIN_RATIO (0.70) // Adjust this according to your filter to avoid clipping.
+#define DEFAULT_GAIN_RATIO (1.00) // Adjust this according to your filter to avoid clipping.
 
 // ESS DAC Specific
 #define USE_ESS_DAC (false)

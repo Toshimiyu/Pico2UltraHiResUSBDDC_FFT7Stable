@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 # Compiler Optimization
-add_compile_options(-Ofast -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wall -flto)
+add_compile_options(-Ofast -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -Wall)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
@@ -18,9 +18,9 @@ if(WIN32)
 else()
     set(USERHOME $ENV{HOME})
 endif()
-set(sdkVersion 2.2.0)
-set(toolchainVersion 13_2_Rel1)
-set(picotoolVersion 2.2.0-a4)
+set(sdkVersion 2.3.1)
+set(toolchainVersion 15_2_Rel1)
+set(picotoolVersion 2.3.1)
 set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
 if (EXISTS ${picoVscode})
     include(${picoVscode})
